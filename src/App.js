@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Index } from "./Components";
-import SignIn from "./Components/SignIn";
-import Layout from "./Components/Layout/Layout";
+import { Index, Layout, SignIn } from "./Components";
 
 function App() {
   return (
@@ -14,7 +12,7 @@ function App() {
             <Route path="blog" element={<div>hi</div>} />
             <Route path="roar" element={<div>oktazt</div>} />
           </Route>
-          <Route path="/login" element={<SignIn />} />
+          <Route exact path="/login" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </div>
